@@ -92,3 +92,48 @@ const add = (m,n = 4) => {
 console.log(add(5));
 
 // ******************************************************************************************
+
+// Reset Parameter
+// * allows a function to treat indefinite number of arguments as an array
+
+const summation = (...a) => {
+    console.log(a);
+    console.log(a.length);
+    console.log(a.push(11));
+    console.log(a);
+    console.log(a.pop());
+    console.log(a);
+
+    let total = 0;
+    for(let i of a){
+        total+=i;
+        console.log(total);
+    }
+}
+summation(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+// **********************************************************************************************
+
+// Spread Parameter
+// simplified method of concatenation
+
+let arr1 = [ "C", "D", "E"];
+let arr2 = [ "F", "G", "H"];
+const arr3 = [...arr1,...arr2];
+console.log(arr3);
+const arr4 = ["A", "B", ...arr3];
+console.log(arr4);
+const arr5 = [...arr4, "I", "J", "K"];
+console.log(arr5);
+console.log(arr5.pop());
+console.log(arr5);
+
+// *************************************************************************************************
+
+// Template Literals
+// usage of back ticks in console log just like single quotes or double quotes
+let nickName = "Nezri";
+let currAge = 23;
+console.log(`My name is ${nickName} and  I am ${currAge} years old.`);
+ 
+
