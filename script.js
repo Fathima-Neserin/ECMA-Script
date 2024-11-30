@@ -136,4 +136,151 @@ let nickName = "Nezri";
 let currAge = 23;
 console.log(`My name is ${nickName} and  I am ${currAge} years old.`);
  
+// **************************************************************************************************
+
+// Array Destructuring
+// * extract mutiple values from data stored on ararays to distinct variables
+
+const fruits = ["Apple", "Orange", "Mango", "Grapes", "Banana"];
+console.log(fruits);
+
+let [A, B, C, D, E] = fruits;
+console.log(A);
+console.log(B);
+console.log(C);
+console.log(D);
+console.log(E);
+console.log(fruits[3]);
+console.log(fruits[4]);
+
+// ******************************************************************************************************
+
+// Object Destructuring
+// * extract mutiple values from data stored on objects to distinct variables
+
+let data = {
+      height : 156,
+      weight : 55,
+      bodyMass : 23,
+      type : "Non - Vegetarian",
+      food : {
+        food1 : "Milk",
+        food2 : "Egg",
+        food3 : "Curd"
+}}
+
+console.log(data.food.food3);
+
+let {height, weight, bodyMass, type : Type, food} = data;
+let {food1, food2, food3} = food;
+console.log(bodyMass);
+console.log(Type);
+console.log(food);
+
+console.log(food.food2);
+
+// *****************************************************************************************************
+
+// New String methods
+
+// string.includes();
+// * returns true if the string contains the spectified value/s otherwise false.
+
+let language = "Javascript";
+console.log(`${language}`.includes("Javascript"));
+console.log(`${language}`.includes("JavaScript"));
+
+// string.startsWith();
+// returns true if the string begins with a specified value otherwise false.
+
+language = "Javascript";
+console.log(`${language}`.startsWith("J"));
+console.log(`${language}`.includes("A"));
+
+// string.endsWith();
+
+language = "Javascript";
+console.log(`${language}`.endsWith("t"));
+console.log(`${language}`.endsWith("T"));
+
+// *******************************************************************************************************
+
+// New Array Methods
+
+// Array.from();
+// * returns an array object from any object with a length property or any iterable object
+
+const place = Array.from("Mananthavady");
+console.log(place);
+console.log(place.length);
+for(let i of place){
+    console.log(i);
+}
+console.log(place.shift());
+console.log(place);
+console.log(place.splice(3, 3));
+console.log(place);
+
+// Array.keys();
+// * returns an array iterator object  with the keys(index values) of an object
+
+let Fruits = ["Apple", "Orange", "Mango", "Grapes", "Banana"];
+console.log(Fruits);
+const key = Fruits.keys();
+console.log(key);
+for(let i of key){
+    console.log(i);
+}
+
+// ********************************************************************************************************
+
+// New Math Methods
+// * Math.trunc();
+// * it returns the integer part
+console.log(Math.trunc(8.789));
+
+// * Math.sign();
+// * it returns -1,0,1 based on the value of a number
+// poitive number => 1
+// zero => 0
+// negative number => -1
+console.log(Math.sign(-5));
+console.log(Math.sign(0));
+console.log(Math.sign(35));
+
+// *Math.cbrt();
+// * it returns cuberoot of  a number similar likr square root(sqrt)
+console.log(Math.cbrt(27));
+console.log(Math.cbrt(125));
+console.log(Math.cbrt(8));
+
+// *Math.log2();
+// * it returns the base 2 logarithm
+console.log(Math.log2(2));
+console.log(Math.log2(4));
+console.log(Math.log2(10));
+
+// *Math.log10();
+// * it returns the base 10 logarithm
+console.log(Math.log10(10));
+console.log(Math.log10(20));
+
+// **********************************************************************************************************
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
